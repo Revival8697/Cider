@@ -330,3 +330,4 @@ src/main/base/sample.json
 
 # yeet circleci ci for now
 .circleci/
+pnpm-lock.yaml
