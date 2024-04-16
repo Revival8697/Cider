@@ -65,23 +65,12 @@ export class AppEvents {
     switch (utils.getStoreValue("visual.hw_acceleration") as string) {
       default:
       case "default":
-        app.commandLine.appendSwitch("enable-accelerated-mjpeg-decode");
-        app.commandLine.appendSwitch("enable-accelerated-video");
-        app.commandLine.appendSwitch("disable-gpu-driver-bug-workarounds");
-        app.commandLine.appendSwitch("ignore-gpu-blacklist");
-        app.commandLine.appendSwitch("enable-native-gpu-memory-buffers");
-        app.commandLine.appendSwitch("enable-accelerated-video-decode");
-        app.commandLine.appendSwitch("enable-gpu-rasterization");
-        app.commandLine.appendSwitch("enable-native-gpu-memory-buffers");
-        app.commandLine.appendSwitch("enable-oop-rasterization");
-        break;
-
-      case "webgpu":
-        console.info("[AppEvents] WebGPU is enabled.");
-        app.commandLine.appendSwitch("enable-unsafe-webgpu");
-        if (process.platform === "linux") {
-          app.commandLine.appendSwitch("enable-features", "Vulkan");
-        }
+        console.info("[AppEvents] Hardware acceleration is enabled.");
+        if (process.platform === 'linux') {
+          // Enable hardware acceleration via VA-API
+          // https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/gpu/vaapi.md
+          app.commandLine.appendSwitch('enable-features', 'VaapiVideoDecodeLinuxGL')
+        };
         break;
 
       case "disabled":
@@ -93,11 +82,6 @@ export class AppEvents {
 
     if (process.platform === "linux") {
       app.commandLine.appendSwitch("disable-features", "MediaSessionService");
-
-      if (os.version().includes("SteamOS")) {
-        app.commandLine.appendSwitch("enable-features", "UseOzonePlatform");
-        app.commandLine.appendSwitch("ozone-platform", "x11");
-      }
     }
 
     /***********************************************************************************************************************
