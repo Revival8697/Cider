@@ -32,8 +32,8 @@
     "@achingbrain/ssdp": "^4.0.6",
     "@crowdin/ota-client": "^1.1.1",
     "@electron/notarize": "^1.2.4",
-    "@sentry/electron": "^4.22.0",
-    "@sentry/integrations": "^7.110.1",
+    "@sentry/electron": "^4.23.0",
+    "@sentry/integrations": "^7.112.0",
     "adm-zip": "^0.5.12",
     "airtunes2": "github:ciderapp/node_airtunes2",
     "castv2-client": "^1.2.0",
@@ -109,9 +109,9 @@
     }
   ],
   "build": {
-    "electronVersion": "29.3.0",
+    "electronVersion": "29.3.1",
     "electronDownload": {
-      "version": "29.3.0+wvcus",
+      "version": "29.3.1+wvcus",
       "mirror": "https://github.com/castlabs/electron-releases/releases/download/v"
     },
     "appId": "cider",
