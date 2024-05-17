@@ -32,8 +32,8 @@
     "@achingbrain/ssdp": "^4.0.6",
     "@crowdin/ota-client": "^1.1.1",
     "@electron/notarize": "^1.2.4",
-    "@sentry/electron": "^4.22.0",
-    "@sentry/integrations": "^7.110.1",
+    "@sentry/electron": "^4.24.0",
+    "@sentry/integrations": "^7.114.0",
     "adm-zip": "^0.5.12",
     "airtunes2": "github:ciderapp/node_airtunes2",
     "castv2-client": "^1.2.0",
@@ -63,7 +63,7 @@
     "upnp-mediarenderer-client": "github:vapormusic/node-upnp-mediarenderer-client",
     "v8-compile-cache": "^2.4.0",
     "wallpaper": "^5.0.1",
-    "ws": "^8.16.0",
+    "ws": "^8.17.0",
     "xml2js": "^0.6.2",
     "youtube-search-without-api-key": "^1.1.0"
   },
@@ -72,7 +72,7 @@
     "@types/discord-rpc": "^4.0.8",
     "@types/express": "^4.17.21",
     "@types/musickit": "github:ciderapp/musickit-types",
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.12.12",
     "@types/qrcode-terminal": "^0.12.2",
     "@types/ws": "^8.5.10",
     "electron": "github:castlabs/electron-releases",
@@ -109,9 +109,9 @@
     }
   ],
   "build": {
-    "electronVersion": "29.3.0",
+    "electronVersion": "29.4.0",
     "electronDownload": {
-      "version": "29.3.0+wvcus",
+      "version": "29.4.0+wvcus",
       "mirror": "https://github.com/castlabs/electron-releases/releases/download/v"
     },
     "appId": "cider",
